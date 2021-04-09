@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "960495593658",
+    "project_id": "player2games-1cc47",
+    "storage_bucket": "player2games-1cc47.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:960495593658:android:e9dd90adedb61652037a83",
+        "android_client_info": {
+          "package_name": "dadm.quixada.ufc.player2games"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "960495593658-n6q5ojj35ak828cm0le5h4pgli7mb70q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dadm.quixada.ufc.player2games",
+            "certificate_hash": "1e40831196b57953ab2a0c7938572cca16ac5ae0"
+          }
+        },
+        {
+          "client_id": "960495593658-06ljc903ldb70dtgq33lkfs5ldd6j0h5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpeTZBPmDdTetav5K23e7C-NTSPL6WoF0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "960495593658-06ljc903ldb70dtgq33lkfs5ldd6j0h5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

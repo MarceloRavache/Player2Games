@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register">
+
+    <EditText
+        android:id="@+id/editTextRegisterName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="116dp"
+        android:layout_marginEnd="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextRegisterEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/editTextRegisterName"
+        app:layout_constraintStart_toStartOf="@+id/editTextRegisterName"
+        app:layout_constraintTop_toBottomOf="@+id/editTextRegisterName" />
+
+    <EditText
+        android:id="@+id/editTextRegisterPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/editTextRegisterEmail"
+        app:layout_constraintStart_toStartOf="@+id/editTextRegisterEmail"
+        app:layout_constraintTop_toBottomOf="@+id/editTextRegisterEmail" />
+
+    <Button
+        android:id="@+id/buttonRegister"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Registrar"
+        app:layout_constraintEnd_toEndOf="@+id/editTextRegisterPassword"
+        app:layout_constraintStart_toStartOf="@+id/editTextRegisterPassword"
+        app:layout_constraintTop_toBottomOf="@+id/editTextRegisterPassword" />
+</androidx.constraintlayout.widget.ConstraintLayout>
