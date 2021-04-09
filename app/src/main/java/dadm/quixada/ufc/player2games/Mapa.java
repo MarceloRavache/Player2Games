@@ -170,12 +170,24 @@ public class Mapa extends FragmentActivity implements OnMapReadyCallback {
                 }
                 for(Location location : locationResult.getLocations()){
 
-                    Toast.makeText(Mapa.this, location.getLongitude()+"",
-                            Toast.LENGTH_SHORT).show();
-
                     LatLng origem = new LatLng(location.getLatitude(), location.getLongitude());
                     mMap.addMarker(new MarkerOptions().position(origem).title("Player Aqui"));
                     mMap.moveCamera(CameraUpdateFactory.newLatLng(origem));
+
+                    FirebaseFirestore.getInstance().collection("locations")
+                            .get()
+                            .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                                @Override
+                                public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                                    if(task.isSuccessful()){
+                                        for (QueryDocumentSnapshot document : task.getResult()) {
+                                            mMap.addMarker(new MarkerOptions()
+                                                    .position(new LatLng(Double.parseDouble(document.getData().toString().replace("{","").replace("}","").split(",")[1].split("=")[1]), Double.parseDouble(document.getData().toString().replace("{","").replace("}","").split(",")[2].split("=")[1]))));
+
+                                        }
+                                    }
+                                }
+                            });
                 }
             }
             @Override
